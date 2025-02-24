@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Moho ❤️</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: pink;
+        }
+        h1 {
+            margin-top: 100px;
+        }
+        .button-container {
+            position: relative;
+            display: inline-block;
+        }
+        .btn {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        .yes-btn {
+            background-color: red;
+            color: white;
+        }
+        .no-btn {
+            background-color: gray;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h1>Why are you saying no? 🥺</h1>
+    <div class="button-container">
+        <button class="btn yes-btn" onclick="showLoveMessage()">Yes</button>
+        <button class="btn no-btn" onclick="moveNoButton()">No</button>
+    </div>
+    <h2 id="message" style="display: none; color: red;"></h2>
+
+    <script>
+        function moveNoButton() {
+            let noButton = document.querySelector('.no-btn');
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 100);
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        }
+
+        function showLoveMessage() {
+            document.querySelector('.button-container').style.display = 'none';
+            let message = document.getElementById('message');
+            message.innerHTML = "Love you ❤️<br>Don't cry for your exams, you'll do good!";
+            message.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
