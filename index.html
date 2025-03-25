@@ -11,21 +11,11 @@
             background-color: pink;
         }
         h1 {
-            margin-top: 20px;
-        }
-        .image-container {
-            margin-top: 50px;
-        }
-        .image-container img {
-            width: 250px;
-            height: auto;
-            border-radius: 10px;
-            border: 3px solid red;
+            margin-top: 100px;
         }
         .button-container {
             position: relative;
             display: inline-block;
-            margin-top: 20px;
         }
         .btn {
             font-size: 20px;
@@ -44,26 +34,23 @@
             color: white;
             position: absolute;
         }
+        #arpita-img {
+            display: none;
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
-
-    <!-- Image Section -->
-    <div class="image-container">
-        <img src="arpita.png" alt="Arpita">
-    </div>
-
-    <!-- Proposal Text -->
-    <h1>HIIIIII ARPITAAAAA, WILL YOU BE MYYY GIRLLL???? 🥺</h1>
-
-    <!-- Button Section -->
+    <h1>HIIIIII ARPITAAAAA WILL YOU BE MYYY GIRLLL???? 🥺</h1>
     <div class="button-container">
         <button class="btn yes-btn" onclick="showLoveMessage()">Yes</button>
         <button class="btn no-btn" onclick="moveNoButton()">No</button>
     </div>
-
-    <!-- Love Message -->
     <h2 id="message" style="display: none; color: red;"></h2>
+    <img id="arpita-img" src="arpita.png" alt="Arpita's Picture">
 
     <script>
         function moveNoButton() {
@@ -79,6 +66,9 @@
             let message = document.getElementById('message');
             message.innerHTML = "Love you ❤️<br>DONT GET NO SIDE NIGGAS";
             message.style.display = 'block';
+
+            // Show the image
+            document.getElementById('arpita-img').style.display = 'block';
         }
     </script>
 </body>
